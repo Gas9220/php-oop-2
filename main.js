@@ -19,6 +19,26 @@ createApp({
                     console.log(this.products.foods);
                     console.log(this.products.accessories);
                 })
+        },
+        checkProductCompatibility(pet) {
+            console.log("Valore iniziale", pet)
+            let petIcon = 'non toccato'
+            switch (pet) {
+                case 'Cat':
+                    petIcon = "fa-solid fa-cat";
+                    break;
+                case 'Dog':
+                    petIcon = "fa-solid fa-dog"
+                    break;
+                case 'Bird':
+                    petIcon = "fa-solid fa-crow"
+                    break;
+                default:
+                    break;
+            }
+
+            console.log(petIcon)
+            return petIcon;
         }
     },
     created() {

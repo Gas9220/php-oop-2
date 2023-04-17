@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,6 +25,7 @@
                         <img :src="food.image" alt="">
                         <div>
                             <h4>{{ food.brand }}: {{ food.name }}</h4>
+                            <span>Suitable for: <i :class="checkProductCompatibility(food.product_destination[0])"></i></span>
                             <span>Remaining quantity: {{ food.quantity }}</span>
                             <span>Pack weight - dimensions: {{ food.dimensions }}</span>
                             <span>Description: {{ food.description }}</span>
@@ -39,6 +41,7 @@
                         <img :src="accessory.image" alt="">
                         <div>
                             <h4>{{ accessory.brand }}: {{ accessory.name }}</h4>
+                            <span>Suitable for: <i :class="checkProductCompatibility(accessory.product_destination[0])"></i></span>
                             <span>Remaining quantity: {{ accessory.quantity }}</span>
                             <span>Pack weight - dimensions: {{ accessory.dimensions }}</span>
                             <span>Description: {{ accessory.description }}</span>
