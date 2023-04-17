@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: darkslategrey;
+}
+
+header h1 {
+    padding: .625rem;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 75rem;
+    margin: 1.25rem auto;
+}
+
+.container h2 {
+    color: darkslategray;
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.foods {
+    display: flex;
+    border: .0625rem solid darkslategray;
+    margin-top: 1rem;
+    padding: .625rem;
+}
+
+.product-card span {
+    display: block;
+    padding: .3125rem;
+}
+
+.product-card img {
+    width: 15rem;
+}

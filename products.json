@@ -11,8 +11,8 @@
                 "product_destination": [
                     "Dog"
                 ],
-                "image": "Dehydrated poultry protein, maize, maize flour, animal fats, wheat, dehydrated pork protein, rice, hydrolysed animal proteins, maize gluten, beet pulp, minerals, fish oil, soya oil, yeasts and parts thereof, hydrolysed crustaceans, hydrolysed cartilage.",
-                "ingredients": "https://shop-cdn-m.mediazs.com/bilder/royal/canin/maxi/adult/crocchette/per/cani/8/400/80729_pla_royalcanin_maxiadult_15kg_hs_01_8.jpg"
+                "image": "https://shop-cdn-m.mediazs.com/bilder/royal/canin/maxi/adult/crocchette/per/cani/8/400/80729_pla_royalcanin_maxiadult_15kg_hs_01_8.jpg",
+                "ingredients": "Dehydrated poultry protein, maize, maize flour, animal fats, wheat, dehydrated pork protein, rice, hydrolysed animal proteins, maize gluten, beet pulp, minerals, fish oil, soya oil, yeasts and parts thereof, hydrolysed crustaceans, hydrolysed cartilage."
             },
             {
                 "name": "Kitten Loaf In Sauce",
@@ -23,8 +23,8 @@
                 "product_destination": [
                     "Cat"
                 ],
-                "image": "Meat and animal derivatives, vegetable protein extracts, derivatives of vegetable origin, cereals, minerals, vegetables, oils and fats, yeasts",
-                "ingredients": "https://shop-cdn-m.mediazs.com/bilder/royal/canin/kitten/in/salsa/alimento/umido/per/gatti/3/400/rc_spt_wet_kitten_cig_mv_3_it_it_3.jpg"
+                "image": "https://shop-cdn-m.mediazs.com/bilder/royal/canin/kitten/in/salsa/alimento/umido/per/gatti/3/400/rc_spt_wet_kitten_cig_mv_3_it_it_3.jpg",
+                "ingredients": "Meat and animal derivatives, vegetable protein extracts, derivatives of vegetable origin, cereals, minerals, vegetables, oils and fats, yeasts"
             }
         ]
     ],
