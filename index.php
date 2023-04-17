@@ -18,15 +18,32 @@
 
         <div class="container">
             <h2>Food for your pets</h2>
-            <div class="foods">
+            <div class="product">
                 <div v-for="food in products.foods">
                     <div class="product-card">
                         <img :src="food.image" alt="">
-                        <h4>{{ food.brand }}: {{ food.name }}</h4>
-                        <span>Remaining quantity: {{ food.quantity }}</span>
-                        <span>Pack weight - dimensions: {{ food.dimensions }}</span>
-                        <span>Description: {{ food.description }}</span>
-                        <span>Ingredients: {{ food.ingredients }}</span>
+                        <div>
+                            <h4>{{ food.brand }}: {{ food.name }}</h4>
+                            <span>Remaining quantity: {{ food.quantity }}</span>
+                            <span>Pack weight - dimensions: {{ food.dimensions }}</span>
+                            <span>Description: {{ food.description }}</span>
+                            <span>Ingredients: {{ food.ingredients }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Accessories for your pets</h2>
+            <div class="product">
+                <div v-for="accessory in products.accessories">
+                    <div class="product-card">
+                        <img :src="accessory.image" alt="">
+                        <div>
+                            <h4>{{ accessory.brand }}: {{ accessory.name }}</h4>
+                            <span>Remaining quantity: {{ accessory.quantity }}</span>
+                            <span>Pack weight - dimensions: {{ accessory.dimensions }}</span>
+                            <span>Description: {{ accessory.description }}</span>
+                            <span>Ingredients: {{ accessory.materials.join(', ') }}</span>
+                        </div>
                     </div>
                 </div>
             </div>

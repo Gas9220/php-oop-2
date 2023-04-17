@@ -27,11 +27,24 @@ header h1 {
     margin-top: 1rem;
 }
 
-.foods {
+.product {
     display: flex;
-    border: .0625rem solid darkslategray;
+    border: .125rem solid darkslategray;
     margin-top: 1rem;
     padding: .625rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: .3125rem;
+    height: 100%;
+}
+
+.product-card div {
+    flex-grow: 1;
 }
 
 .product-card span {
