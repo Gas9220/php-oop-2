@@ -26,7 +26,7 @@
                         <div>
                             <h4>{{ food.brand }}: {{ food.name }}</h4>
                             <span>Suitable for: <i :class="checkProductCompatibility(food.product_destination[0])"></i></span>
-                            <span>Remaining quantity: {{ food.quantity }}</span>
+                            <span>Remaining quantity: {{ food.quantity }} <i class="fa-solid fa-circle-dot" :style="{ color: checkProductAvailability(food.quantity) ? 'green' : 'red' }"></i></span>
                             <span>Pack weight - dimensions: {{ food.dimensions }}</span>
                             <span>Description: {{ food.description }}</span>
                             <span>Ingredients: {{ food.ingredients }}</span>
@@ -42,7 +42,7 @@
                         <div>
                             <h4>{{ accessory.brand }}: {{ accessory.name }}</h4>
                             <span>Suitable for: <i :class="checkProductCompatibility(accessory.product_destination[0])"></i></span>
-                            <span>Remaining quantity: {{ accessory.quantity }}</span>
+                            <span>Remaining quantity: {{ accessory.quantity }} <i class="fa-solid fa-circle-dot" :style="{ color: checkProductAvailability(accessory.quantity) ? 'green' : 'red' }"></i></span>
                             <span>Pack weight - dimensions: {{ accessory.dimensions }}</span>
                             <span>Description: {{ accessory.description }}</span>
                             <span>Ingredients: {{ accessory.materials.join(', ') }}</span>

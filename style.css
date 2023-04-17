@@ -29,6 +29,7 @@ header h1 {
 
 .product {
     display: flex;
+    justify-content: center;
     border: .125rem solid darkslategray;
     margin-top: 1rem;
     padding: .625rem;
@@ -37,6 +38,7 @@ header h1 {
 .product-card {
     display: flex;
     flex-direction: column;
+    width: 300px;
     justify-content: space-between;
     cursor: pointer;
     padding: .3125rem;

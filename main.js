@@ -39,6 +39,13 @@ createApp({
 
             console.log(petIcon)
             return petIcon;
+        },
+        checkProductAvailability(quantity) {
+            if (quantity > 0 ) {
+                return true
+            }
+
+            return false
         }
     },
     created() {
