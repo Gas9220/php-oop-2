@@ -1,0 +1,64 @@
+[
+    [
+        "food",
+        [
+            {
+                "name": "Maxi Adult",
+                "quantity": 10,
+                "brand": "Royal Canin",
+                "description": "The nutritional requirements of a larger breed dog versus a smaller breed dog vary greatly, therefore it is essential you feed a balanced diet according to size and other particular sensitivities. ROYAL CANIN® Maxi Adult food is specially formulated with your dog's nutritional needs in mind. This food is suitable for large dogs aged 15 months and over - with an adult weight ranging between 26-44kg.",
+                "dimensions": "22x50x5 12kg",
+                "product_destination": [
+                    "Dog"
+                ],
+                "image": "Dehydrated poultry protein, maize, maize flour, animal fats, wheat, dehydrated pork protein, rice, hydrolysed animal proteins, maize gluten, beet pulp, minerals, fish oil, soya oil, yeasts and parts thereof, hydrolysed crustaceans, hydrolysed cartilage.",
+                "ingredients": "https://shop-cdn-m.mediazs.com/bilder/royal/canin/maxi/adult/crocchette/per/cani/8/400/80729_pla_royalcanin_maxiadult_15kg_hs_01_8.jpg"
+            },
+            {
+                "name": "Kitten Loaf In Sauce",
+                "quantity": 10,
+                "brand": "Royal Canin",
+                "description": "When your kitten is around 4 months old, their growth rate might slow but their activity levels are on the up and up! It's a time when your kitten needs the right nutrients to support developing bones, muscles, organs, and immune and nervous systems. Very soon, your kitten will also develop 30 adult teeth.",
+                "dimensions": "12x22x3 5kg",
+                "product_destination": [
+                    "Cat"
+                ],
+                "image": "Meat and animal derivatives, vegetable protein extracts, derivatives of vegetable origin, cereals, minerals, vegetables, oils and fats, yeasts",
+                "ingredients": "https://shop-cdn-m.mediazs.com/bilder/royal/canin/kitten/in/salsa/alimento/umido/per/gatti/3/400/rc_spt_wet_kitten_cig_mv_3_it_it_3.jpg"
+            }
+        ]
+    ],
+    [
+        "accessory",
+        [
+            {
+                "name": "Scratch Playpost",
+                "quantity": 2,
+                "brand": "Cat-N",
+                "description": "Playpost Cat Scratcher with Sisal post, square base and hanging play ball with catnip and carpet base.",
+                "dimensions": "29x29x39 5kg",
+                "product_destination": [
+                    "Cat"
+                ],
+                "image": "https://www.petshop.co.uk/SCA%20Product%20Images/Playpost-Cat-N-Scratch-Ball-29x29x39cm_1?resizeid=5&resizeh=1200&resizew=1200",
+                "materials": [
+                    "Wood, tissue"
+                ]
+            },
+            {
+                "name": "Wild Bird Seed Feeder",
+                "quantity": 0,
+                "brand": "Kingdom",
+                "description": "This Bird Seed Feeder is manufactured from durable plastic and is easy to use and hang. Simply fill with bird seed and hang with the attached hanging rope.",
+                "dimensions": "5x15x5 1kg",
+                "product_destination": [
+                    "Bird"
+                ],
+                "image": "https://www.petshop.co.uk/SCA%20Product%20Images/Wild-Bird-Seed-Feeder-with-Birds-Perch_1.png?resizeid=5&resizeh=1200&resizew=1200",
+                "materials": [
+                    "Plastic"
+                ]
+            }
+        ]
+    ]
+]
