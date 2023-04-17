@@ -11,6 +11,13 @@ class Product {
         $this->dimensions = $_dimensions;
         $this->product_destination = $_product_destination;
     }
+
+    public function is_product_available() {
+        return $this->quantity > 0 ? true : false;
+    }
 }
+
+$newProduct = new Product("Royal Canin", 0, "Royal Canin", "lorem", "22x50x10 10kg", ['Dog']);
+echo $newProduct->is_product_available();
 
 ?>
