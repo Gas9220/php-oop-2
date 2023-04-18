@@ -17,6 +17,31 @@ class Product
         $this->image = $_image;
     }
 
+    public function get_name()
+    {
+        return $this->name;
+    }
+
+    public function get_image()
+    {
+        return $this->image;
+    }
+
+    public function get_dimensions()
+    {
+        return $this->dimensions;
+    }
+
+    public function get_description()
+    {
+        return $this->description;
+    }
+
+    public function get_quantity()
+    {
+        return $this->quantity;
+    }
+
     public function is_product_available()
     {
         return $this->quantity > 0 ? true : false;

@@ -8,6 +8,10 @@ class Accessory extends Product {
         parent::__construct($_name, $_quantity, $_brand, $_description, $_dimensions, $_product_destination, $_image);
         $this->materials = $_materials;
     }
+
+    public function get_materials() {
+        return implode(", ", $this->materials);
+    }
 }
 
 $sampleAccessory1 = new Accessory(

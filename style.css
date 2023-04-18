@@ -54,6 +54,11 @@ header h1 {
     padding: .3125rem;
 }
 
+.product-card i {
+    margin-left: .3125rem;
+}
+
 .product-card img {
     width: 15rem;
+    height: 18.75rem;
 }
