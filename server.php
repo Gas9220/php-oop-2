@@ -1,6 +1,6 @@
 <?php
 
-$database = file_get_contents(__DIR__.'/products.json');
+require_once __DIR__ .'/Models/Food.php';
+require_once __DIR__ .'/Models/Accessory.php';
 
-header('Content-Type: application/json');
-echo $database;
+$database = [$foods, $accessories];

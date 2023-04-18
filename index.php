@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/server.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,50 +17,48 @@
 </head>
 
 <body>
-    <div id="app">
-        <header>
-            <h1>Zoolandia</h1>
-        </header>
+    <header>
+        <h1>Zoolandia</h1>
+    </header>
 
-        <div class="container">
-            <h2>Food for your pets</h2>
-            <div class="product">
-                <div v-for="food in products.foods">
-                    <div class="product-card">
-                        <img :src="food.image" alt="">
-                        <div>
-                            <h4>{{ food.brand }}: {{ food.name }}</h4>
-                            <span>Suitable for: <i :class="checkProductCompatibility(food.product_destination[0])"></i></span>
-                            <span>Remaining quantity: {{ food.quantity }} <i class="fa-solid fa-circle-dot" :style="{ color: checkProductAvailability(food.quantity) ? 'green' : 'red' }"></i></span>
-                            <span>Pack weight - dimensions: {{ food.dimensions }}</span>
-                            <span>Description: {{ food.description }}</span>
-                            <span>Ingredients: {{ food.ingredients }}</span>
-                        </div>
-                    </div>
-                </div>
+    <?php foreach ($database[0] as $food) : ?>
+        <div class="product-card">
+            <img :src="food.image" alt="">
+            <div>
+                <h4><?php echo $food->get_name(); ?></h4>
+                <span>Suitable for: <i class="<?php echo $food->product_compatibility(); ?>"></i></span>
+               <!--  <span>Remaining quantity: {{ food.quantity }} <i class="fa-solid fa-circle-dot" :style="{ color: checkProductAvailability(food.quantity) ? 'green' : 'red' }"></i></span>
+                <span>Pack weight - dimensions: {{ food.dimensions }}</span>
+                <span>Description: {{ food.description }}</span>
+                <span>Ingredients: {{ food.ingredients }}</span> -->
             </div>
-            <h2>Accessories for your pets</h2>
-            <div class="product">
-                <div v-for="accessory in products.accessories">
-                    <div class="product-card">
-                        <img :src="accessory.image" alt="">
-                        <div>
-                            <h4>{{ accessory.brand }}: {{ accessory.name }}</h4>
-                            <span>Suitable for: <i :class="checkProductCompatibility(accessory.product_destination[0])"></i></span>
-                            <span>Remaining quantity: {{ accessory.quantity }} <i class="fa-solid fa-circle-dot" :style="{ color: checkProductAvailability(accessory.quantity) ? 'green' : 'red' }"></i></span>
-                            <span>Pack weight - dimensions: {{ accessory.dimensions }}</span>
-                            <span>Description: {{ accessory.description }}</span>
-                            <span>Ingredients: {{ accessory.materials.join(', ') }}</span>
-                        </div>
+        </div>
+    <?php endforeach; ?>
+
+
+
+    <!-- <div class="container">
+        <h2>Food for your pets</h2>
+        <div class="product">
+
+        </div>
+        <h2>Accessories for your pets</h2>
+        <div class="product">
+            <div v-for="accessory in products.accessories">
+                <div class="product-card">
+                    <img :src="accessory.image" alt="">
+                    <div>
+                        <h4>{{ accessory.brand }}: {{ accessory.name }}</h4>
+                        <span>Suitable for: <i :class="checkProductCompatibility(accessory.product_destination[0])"></i></span>
+                        <span>Remaining quantity: {{ accessory.quantity }} <i class="fa-solid fa-circle-dot" :style="{ color: checkProductAvailability(accessory.quantity) ? 'green' : 'red' }"></i></span>
+                        <span>Pack weight - dimensions: {{ accessory.dimensions }}</span>
+                        <span>Description: {{ accessory.description }}</span>
+                        <span>Ingredients: {{ accessory.materials.join(', ') }}</span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.1/axios.min.js" integrity="sha512-NbjaUHU8g0+Y8tMcRtIz0irSU3MjLlEdCvp82MqciVF4R2Ru/eaXHDjNSOvS6EfhRYbmQHuznp/ghbUvcC0NVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="main.js"></script>
+    </div> -->
 </body>
 
 </html>

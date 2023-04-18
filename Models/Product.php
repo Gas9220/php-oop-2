@@ -1,11 +1,13 @@
 <?php
 
-require_once __DIR__ .'/Pet.php';
+require_once __DIR__ . '/Pet.php';
 
-class Product implements \JsonSerializable {
+class Product
+{
     protected $name, $quantity, $brand, $description, $dimensions, $product_destination, $image;
 
-    public function __construct(string $_name, int $_quantity, string $_brand, string $_description, string $_dimensions, array $_product_destination, string $_image) {
+    public function __construct(string $_name, int $_quantity, string $_brand, string $_description, string $_dimensions, Pet $_product_destination, string $_image)
+    {
         $this->name = $_name;
         $this->quantity = $_quantity;
         $this->brand = $_brand;
@@ -15,13 +17,28 @@ class Product implements \JsonSerializable {
         $this->image = $_image;
     }
 
-    public function is_product_available() {
+    public function is_product_available()
+    {
         return $this->quantity > 0 ? true : false;
     }
 
-    public function jsonSerialize() {
-        return get_object_vars($this);
+    public function product_compatibility()
+    {
+        $compatibility = '';
+
+        switch ($this->product_destination) {
+            case Pet::cat:
+                $compatibility = "fa-solid fa-cat";
+                break;
+            case Pet::dog:
+                $compatibility = "fa-solid fa-dog";
+                break;
+            case Pet::bird:
+                $compatibility = "fa-solid fa-crow";
+                break;
+            default:
+                $compatibility = "ciao";
+        }
+        return $compatibility;
     }
 }
-
-?>
