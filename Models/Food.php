@@ -5,9 +5,9 @@ class Food extends Product
 {
     private $ingredients;
 
-    public function __construct(string $_name, int $_quantity, string $_brand, string $_description, string $_dimensions, Pet $_product_destination, string $_image, string $_ingredients)
+    public function __construct(string $_name, int $_quantity, string $_brand, string $_description, string $_dimensions, Pet $_product_destination, string $_image, float $_price, string $_ingredients)
     {
-        parent::__construct($_name, $_quantity, $_brand, $_description, $_dimensions, $_product_destination, $_image);
+        parent::__construct($_name, $_quantity, $_brand, $_description, $_dimensions, $_product_destination, $_image, $_price);
         $this->ingredients = $_ingredients;
     }
 
@@ -25,8 +25,8 @@ $sampleFood1 = new Food(
     "22x50x5 12kg",
     Pet::dog,
     "https://shop-cdn-m.mediazs.com/bilder/royal/canin/maxi/adult/crocchette/per/cani/8/400/80729_pla_royalcanin_maxiadult_15kg_hs_01_8.jpg",
+    69.99,
     "Dehydrated poultry protein, maize, maize flour, animal fats, wheat, dehydrated pork protein, rice, hydrolysed animal proteins, maize gluten, beet pulp, minerals, fish oil, soya oil, yeasts and parts thereof, hydrolysed crustaceans, hydrolysed cartilage."
-    
 );
 
 $sampleFood2 = new Food(
@@ -37,6 +37,7 @@ $sampleFood2 = new Food(
     "12x22x3 5kg",
     Pet::cat,
     "https://shop-cdn-m.mediazs.com/bilder/royal/canin/kitten/in/salsa/alimento/umido/per/gatti/3/400/rc_spt_wet_kitten_cig_mv_3_it_it_3.jpg",
+    0.79,
     "Meat and animal derivatives, vegetable protein extracts, derivatives of vegetable origin, cereals, minerals, vegetables, oils and fats, yeasts"
     
 );

@@ -33,6 +33,7 @@ require_once __DIR__ . '/server.php';
                         <span>Description: <?php echo $food->get_description(); ?></span>
                         <span>Ingredients: <?php echo $food->get_ingredients(); ?></span>
                     </div>
+                    <button>Buy for <?php echo $food->get_price(); ?>€</button>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -49,6 +50,7 @@ require_once __DIR__ . '/server.php';
                         <span>Description: <?php echo $accessory->get_description(); ?></span>
                         <span>Ingredients: <?php echo $accessory->get_materials(); ?></span>
                     </div>
+                    <button>Buy for <?php echo $accessory->get_price(); ?>€</button>
                 </div>
             <?php endforeach; ?>
         </div>

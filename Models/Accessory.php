@@ -4,8 +4,8 @@ require_once __DIR__ .'/Product.php';
 class Accessory extends Product {
     private $materials;
 
-    public function __construct(string $_name, int $_quantity, string $_brand, string $_description, string $_dimensions, Pet $_product_destination, string $_image, array $_materials) {
-        parent::__construct($_name, $_quantity, $_brand, $_description, $_dimensions, $_product_destination, $_image);
+    public function __construct(string $_name, int $_quantity, string $_brand, string $_description, string $_dimensions, Pet $_product_destination, string $_image, float $price, array $_materials) {
+        parent::__construct($_name, $_quantity, $_brand, $_description, $_dimensions, $_product_destination, $_image, $price);
         $this->materials = $_materials;
     }
 
@@ -22,6 +22,7 @@ $sampleAccessory1 = new Accessory(
     "29x29x39 5kg",
     Pet::cat,
     "https://www.petshop.co.uk/SCA%20Product%20Images/Playpost-Cat-N-Scratch-Ball-29x29x39cm_1?resizeid=5&resizeh=1200&resizew=1200",
+    29.99,
     ["Wood, tissue"]
 );
 
@@ -33,6 +34,7 @@ $sampleAccessory2 = new Accessory(
     "5x15x5 1kg",
     Pet::bird,
     "https://www.petshop.co.uk/SCA%20Product%20Images/Wild-Bird-Seed-Feeder-with-Birds-Perch_1.png?resizeid=5&resizeh=1200&resizew=1200",
+    10.99,
     ["Plastic"]
 );
 

@@ -1,12 +1,14 @@
 <?php
 
 require_once __DIR__ . '/Pet.php';
-
+require_once __DIR__ . '/Price.php';
 class Product
 {
+    use Price;
+
     protected $name, $quantity, $brand, $description, $dimensions, $product_destination, $image;
 
-    public function __construct(string $_name, int $_quantity, string $_brand, string $_description, string $_dimensions, Pet $_product_destination, string $_image)
+    public function __construct(string $_name, int $_quantity, string $_brand, string $_description, string $_dimensions, Pet $_product_destination, string $_image, float $_price)
     {
         $this->name = $_name;
         $this->quantity = $_quantity;
@@ -15,6 +17,7 @@ class Product
         $this->dimensions = $_dimensions;
         $this->product_destination = $_product_destination;
         $this->image = $_image;
+        $this->price = $_price;
     }
 
     public function get_name()

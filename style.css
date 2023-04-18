@@ -58,6 +58,14 @@ header h1 {
     margin-left: .3125rem;
 }
 
+.product-card button {
+    max-width: 10rem;
+    background-color: darkslategray;
+    padding: .3125rem .625rem;
+    align-self: center;
+    cursor: pointer;
+}
+
 .product-card img {
     width: 15rem;
     height: 18.75rem;
