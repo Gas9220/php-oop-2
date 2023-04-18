@@ -27,7 +27,7 @@ header h1 {
     margin-top: 1rem;
 }
 
-.product {
+.products {
     display: flex;
     justify-content: center;
     border: .125rem solid darkslategray;

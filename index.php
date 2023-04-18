@@ -21,10 +21,10 @@ require_once __DIR__ . '/server.php';
     </header>
     <div class="container">
         <h2>Food for your pets</h2>
-        <div class="product">
+        <div class="products">
             <?php foreach ($database[0] as $food) : ?>
                 <div class="product-card">
-                    <img :src="<?php echo $food->get_image(); ?>" alt="">
+                    <img src="<?php echo $food->get_image(); ?>" alt="">
                     <div>
                         <h4><?php echo $food->get_name(); ?></h4>
                         <span>Suitable for: <i class="<?php echo $food->product_compatibility(); ?>"></i></span>
@@ -37,10 +37,10 @@ require_once __DIR__ . '/server.php';
             <?php endforeach; ?>
         </div>
         <h2>Accessories for your pets</h2>
-        <div class="product">
+        <div class="products">
             <?php foreach ($database[1] as $accessory) : ?>
                 <div class="product-card">
-                    <img :src="<?php echo $accessory->get_image(); ?>" alt="">
+                    <img src="<?php echo $accessory->get_image(); ?>" alt="">
                     <div>
                         <h4><?php echo $accessory->get_name(); ?></h4>
                         <span>Suitable for: <i class="<?php echo $accessory->product_compatibility(); ?>"></i></span>
