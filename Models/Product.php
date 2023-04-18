@@ -69,4 +69,12 @@ class Product
         }
         return $compatibility;
     }
+
+    public function buyProduct() {
+        if ($this->quantity <= 0) {
+            throw new Exception("Can't buy this product because is sold out");
+        }
+
+        return $this->quantity = $this->quantity - 1;
+    }
 }

@@ -22,7 +22,7 @@ require_once __DIR__ . '/server.php';
     <div class="container">
         <h2>Food for your pets</h2>
         <div class="products">
-            <?php foreach ($database[0] as $food) : ?>
+            <?php foreach ($database[0] as $key=>$food) : ?>
                 <div class="product-card">
                     <img src="<?php echo $food->get_image(); ?>" alt="">
                     <div>
@@ -33,13 +33,16 @@ require_once __DIR__ . '/server.php';
                         <span>Description: <?php echo $food->get_description(); ?></span>
                         <span>Ingredients: <?php echo $food->get_ingredients(); ?></span>
                     </div>
-                    <button>Buy for <?php echo $food->get_price(); ?>€</button>
+                    <form action="" method="get">
+                        <input style="display:none" name="<?php echo $key ?>" id="<?php echo $key ?>" value="<?php echo $key ?>"></input>
+                        <button type="submit" name="buy-food" id="buy-food">Buy for <?php echo $food->get_price(); ?>€</button>
+                    </form>
                 </div>
             <?php endforeach; ?>
         </div>
         <h2>Accessories for your pets</h2>
         <div class="products">
-            <?php foreach ($database[1] as $accessory) : ?>
+            <?php foreach ($database[1] as $key => $accessory) : ?>
                 <div class="product-card">
                     <img src="<?php echo $accessory->get_image(); ?>" alt="">
                     <div>
@@ -50,7 +53,10 @@ require_once __DIR__ . '/server.php';
                         <span>Description: <?php echo $accessory->get_description(); ?></span>
                         <span>Ingredients: <?php echo $accessory->get_materials(); ?></span>
                     </div>
-                    <button>Buy for <?php echo $accessory->get_price(); ?>€</button>
+                    <form action="" method="get">
+                        <input style="display:none" name="<?php echo $key ?>" id="<?php echo $key ?>" value="<?php echo $key ?>"></input>
+                        <button type="submit" name="buy-accessory" id="buy-accessory">Buy for <?php echo $accessory->get_price(); ?>€</button>
+                    </form>
                 </div>
             <?php endforeach; ?>
         </div>
